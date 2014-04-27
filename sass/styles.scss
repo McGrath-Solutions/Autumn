@@ -11,7 +11,7 @@
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
-
+/*@import "zen/background";*/
 /* Layout rules */
 @import "layouts/responsive";
 
@@ -19,7 +19,12 @@
 @import "components/misc";
 // Optionally, add your own components here.
 @import "print";
+@import "zen";
+
+
 
 /* SMACSS theme rules */
-/* @import "theme-A"; */
+@import "themes/theme-a";
+@import "../images/footer-icons/*.png";
+@include all-footer-icons-sprites;
 /* @import "theme-B"; */

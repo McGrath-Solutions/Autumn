@@ -77,11 +77,15 @@
  * Branding header.
  */
 
+#header{
+    height: 10.714em;
+}
+
 /* Wrapping link for logo. */
 .header__logo {
   float: left; /* LTR */
   margin: 0;
-  padding: 0;
+  padding: .714em;
 }
 
 /* Logo image. */
@@ -135,7 +139,7 @@
  */
 #navigation {
   /* Sometimes you want to prevent overlapping with main div. */
-  /* overflow: hidden; */
+  /*overflow: hidden;*/
 
   .block {
     margin-bottom: 0;

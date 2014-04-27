@@ -49,15 +49,15 @@ $legacy-support-for-ie8: true;
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   16px; // The font size set on the root html element.
+$base-font-size:   14px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
 
-$h1-font-size: 2    * $base-font-size;
-$h2-font-size: 1.5  * $base-font-size;
-$h3-font-size: 1.17 * $base-font-size;
-$h4-font-size: 1    * $base-font-size;
-$h5-font-size: 0.83 * $base-font-size;
-$h6-font-size: 0.67 * $base-font-size;
+$h1-font-size: 1.5    * $base-font-size;
+$h2-font-size: 1.17  * $base-font-size;
+$h3-font-size: 1 * $base-font-size;
+$h4-font-size: 0.83    * $base-font-size;
+$h5-font-size: 0.67 * $base-font-size;
+$h6-font-size: 0.55 * $base-font-size;
 
 // The following font family declarations are based on the Microsoft core web
 // fonts which are common fonts available on most computer systems. The DejaVu
@@ -79,14 +79,15 @@ $verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
 $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
 $arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$trebucht-ms:     "Trebucht MS", Arial, Helvetica, sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $verdana; // The font family set on the html element.
-$font-body:        $verdana;
+$base-font-family: $trebucht-ms; // The font family set on the html element.
+$font-body:        $trebucht-ms;
 $font-monospace:   $courier;
 
 

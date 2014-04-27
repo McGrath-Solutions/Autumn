@@ -12,8 +12,8 @@
 ; page at admin/appearance.
 
 screenshot  = screenshot.png
-name        = Zen Sub-theme Starter Kit
-description = Read the <a href="https://drupal.org/node/873778">online docs</a> or the included README.txt on how to create a theme with Zen.
+name        = Autumn
+description = Autumn colored theme based on Zen.
 
 
 
@@ -65,9 +65,8 @@ stylesheets[all][] = css/styles.css
 
 
 ; Optionally add some JavaScripts to your theme.
-
-;scripts[] = js/script.js
-
+;scripts[] = code.jquery.com/jquery-1.11.0.min.js
+;scripts[] = js/jquery.equalheights.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
@@ -87,11 +86,15 @@ stylesheets[all][] = css/styles.css
 
 regions[header]         = Header
 regions[navigation]     = Navigation bar
+regions[sidebar_navigation]    = Navigation sidebar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
+regions[footer_first] =  First Footer
+regions[footer_th] =  Second Footer
+regions[footer_first] =  First Footer
 regions[footer]         = Footer
 regions[bottom]         = Page bottom
 

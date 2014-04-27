@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 25, 2014, 7:50:01 PM
+    Author     : Owner
+*/
+
+#header{
+    background-color: #FFDC73;
+    color: #000;
+}
+
+#main{
+    background-color: #FFEFBF;
+    color: #000;
+}
+
+#footer{
+    background-color: #B28500;
+    color: #fff;  
+    height: 5em;
+    
+    h2{
+        @include element-invisible;
+    }
+    .footer-icons-*{
+        a{
+            
+        }
+    }
+}
+
+.region-sidebar-first{
+    .even, .odd{
+        @include gradient-boxes;
+    }
+}
+
+.region-sidebar-second{
+    .even, .odd{
+        @include texture-boxes;
+    }
+}
+
+#secondary-menu{
+    padding-top: 4.286em;
+    li{
+        float: left;
+    }
+    a{
+    display: block;
+    height: 2.143em;
+    width: 8.214em;
+    color: #ffffff;
+    background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#A45A10));
+    border:solid 1px #000000;-moz-border-radius: 28px;-webkit-border-radius: 28px;border-radius: 28px;
+    padding-top: .357em;
+    text-align: center;
+}
+a:focus, a:hover{
+    background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#FF8C00));
+    border:solid 1px #000000;-moz-border-radius: 28px;-webkit-border-radius: 28px;border-radius: 28px;
+}
+a:active{
+    background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#FEE2BF));
+    border:solid 1px #000000;-moz-border-radius: 28px;-webkit-border-radius: 28px;border-radius: 28px;    
+}
+}
+

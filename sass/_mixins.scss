@@ -35,3 +35,48 @@
     @include element-invisible-off;
   }
 }
+
+@mixin body-background {
+    margin: 0;
+    background:-webkit-gradient(linear, 80% 2%, 81% 100%, from(#000000), to(#FDFFFF));
+}
+
+@mixin texture-boxes{
+    background: url('../images/texture-bg.png') repeat;
+    border:solid 2px #B28500;
+    -moz-border-radius: 17px;
+    -webkit-border-radius: 17px;
+    border-radius: 17px;
+    margin: .357em;
+    text-align: center;
+    p{
+        a{
+            display: block;
+            height: 2.5em;
+            width: 10.714em;
+            color: #ffffbf;
+            background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#ACAC9D));
+            border:solid 1px #000000;-moz-border-radius: 28px;-webkit-border-radius: 28px;border-radius: 28px;
+            padding-top: 10px;
+            font-weight: bold;
+            margin: 0 auto;
+        } 
+        a:focus, a:hover{
+            background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#FFFF00));
+            border:solid 1px #000000;-moz-border-radius: 28px;-webkit-border-radius: 28px;border-radius: 28px;    
+        }
+        a:active{
+            background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#FFFF00));
+            border:solid 1px #000000;-moz-border-radius: 28px;-webkit-border-radius: 28px;border-radius: 28px;    
+        }
+    }
+}
+
+@mixin gradient-boxes{
+     background:-webkit-gradient(linear, 80% 2%, 81% 100%, from(#FFDC73), to(#934C05));
+    border:solid 2px #B28500;
+-moz-border-radius: 17px;
+-webkit-border-radius: 17px;
+border-radius: 17px;
+
+}
