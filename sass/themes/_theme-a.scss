@@ -21,16 +21,12 @@ and open the template in the editor.
 #footer{
     background-color: #B28500;
     color: #fff;  
-    height: 5em;
+    
     
     h2{
         @include element-invisible;
     }
-    .footer-icons-*{
-        a{
-            
-        }
-    }
+    
 }
 
 .region-sidebar-first{
@@ -70,3 +66,17 @@ a:active{
 }
 }
 
+.nice-menu{
+    
+}
+
+/* Nice Menu */
+#vertical-navigation{
+    #nice-menu-1{
+        li{
+            width: 100%;
+        }
+        
+    }
+    
+}

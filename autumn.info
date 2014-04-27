@@ -65,8 +65,7 @@ stylesheets[all][] = css/styles.css
 
 
 ; Optionally add some JavaScripts to your theme.
-;scripts[] = code.jquery.com/jquery-1.11.0.min.js
-;scripts[] = js/jquery.equalheights.js
+;scripts[] = js/script.js
 
 
 ; This section lists the regions defined in Zen's default page.tpl.php and
@@ -84,19 +83,23 @@ stylesheets[all][] = css/styles.css
 ; And you'll use this variable in maintenance-page.tpl.php:
 ;   <?php print $header_top; ?>
 
+; Default Regions
 regions[header]         = Header
 regions[navigation]     = Navigation bar
-regions[sidebar_navigation]    = Navigation sidebar
 regions[highlighted]    = Highlighted
 regions[help]           = Help
 regions[content]        = Content
 regions[sidebar_first]  = First sidebar
 regions[sidebar_second] = Second sidebar
-regions[footer_first] =  First Footer
-regions[footer_th] =  Second Footer
-regions[footer_first] =  First Footer
-regions[footer]         = Footer
+;regions[footer]         = Footer
 regions[bottom]         = Page bottom
+
+; Custom Regions
+regions[vertical_menu]  = Vertical Menu
+regions[footer_first]   = First Footer
+regions[footer_second]  = Second Footer
+regions[footer_third]   = Third Footer
+regions[footer_bottom]  = Bottom Footer
 
 ; The page_top and page_bottom regions are hidden, which means they will not
 ; show up on the blocks administration page. But they are required in order for
@@ -139,6 +142,9 @@ settings[zen_html5_respond_meta][] = html5
 settings[zen_html5_respond_meta][] = meta
 settings[zen_rebuild_registry]     = 1
 settings[zen_wireframes]           = 0
+
+; Custom settings
+settings[vertical_menu]            = 0
 
 ; To make this sub-theme an admin theme with shortcut links next to titles,
 ; uncomment the line below.

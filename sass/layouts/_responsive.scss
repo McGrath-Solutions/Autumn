@@ -72,6 +72,8 @@ $zen-auto-include-item-base: false;
     top: 0;
     height: $nav-height;
     width: $zen-grid-width;
+    
+    
   }
 }
 
@@ -165,14 +167,14 @@ $zen-auto-include-item-base: false;
   /**
    * The layout when there is only one sidebar, the left one.
    */
-  .sidebar-nav {
+  .vertical-menu {
     /* Span 4 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(10, 3);
     }
 
     /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-nav {
+    #vertical-navigation {
       @include zen-grid-item(2, 1);
     }
   }
@@ -185,7 +187,7 @@ $zen-auto-include-item-base: false;
     #content {
       @include zen-grid-item(10, 3);
     }
-    .region-sidebar-nav {
+    #vertical-navigation {
       @include zen-grid-item(2, 1);
     }
     /* Span 1 column, starting in 1st column from left. */
@@ -219,7 +221,7 @@ $zen-auto-include-item-base: false;
     }
 
     /* Span 1 column, starting in 1st column from left. */
-    .region-sidebar-first {
+    #vertical-navigation {
       @include zen-grid-item(2, 1);
     }
 
@@ -227,5 +229,77 @@ $zen-auto-include-item-base: false;
     .region-sidebar-second {
       @include zen-grid-item(3, 10);
     }
+    
+    .region-sidebar-first {
+      @include zen-grid-item(2, 1);
+    }
   }
+  
+  .first-footer{
+      .region-footer-first{
+            @include zen-grid-item(12, 1);
+        }
+  }
+  
+  .second-footer{
+      .region-footer-second{
+            @include zen-grid-item(12, 1);
+        }
+  }
+  
+  .third-footer{
+      .region-footer-third{
+            @include zen-grid-item(12, 1);
+        }
+  }
+  
+  .footer1-footer2{
+        .region-footer-first{
+            @include zen-grid-item(6, 1);
+        }
+        .region-footer-second{
+            @include zen-grid-item(6, 1, right);
+        }
+        .region-footer-bottom{
+            @include zen-clear(right);
+            @include zen-grid-item(12, 1);
+        }
+    }
+    
+    .footer1-footer3{
+        .region-footer-first{
+            @include zen-grid-item(6, 1);
+        }
+        .region-footer-third{
+            @include zen-grid-item(6, 1, right);
+        }
+    }
+    
+    .footer2-footer3{
+        .region-footer-second{
+            @include zen-grid-item(6, 1);
+        }
+        .region-footer-third{
+            @include zen-grid-item(6, 1, right);
+        }
+    }
+    
+    /* Three footers */
+    .three-footers{
+        .region-footer-first{
+            @include zen-grid-item(4, 1);
+        }
+
+        .region-footer-second{
+            @include zen-grid-item(4, 5);
+        }
+
+        .region-footer-third{
+            @include zen-grid-item(4, 9);
+        }
+        
+        .region-footer-bottom{
+            @include zen-grid-item(12, 1);
+        }
+    }
 }

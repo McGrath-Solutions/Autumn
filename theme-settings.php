@@ -15,12 +15,12 @@ function autumn_form_system_theme_settings_alter(&$form, &$form_state, $form_id 
 
   // Create the form using Forms API: http://api.drupal.org/api/7
 
-  /* -- Delete this line if you want to use this setting
-  $form['autumn_example'] = array(
+  
+  $form['vertical_menu'] = array(
     '#type'          => 'checkbox',
-    '#title'         => t('autumn sample setting'),
-    '#default_value' => theme_get_setting('autumn_example'),
-    '#description'   => t("This option doesn't do anything; it's just an example."),
+    '#title'         => t('Vertical Menu'),
+    '#default_value' => theme_get_setting('vertical_menu'),
+    '#description'   => t("Creates a vertical main menu on left side of page."),
   );
   // */
 

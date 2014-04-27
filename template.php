@@ -34,15 +34,38 @@ function autumn_preprocess_maintenance_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("html" in this case.)
  */
-/* -- Delete this line if you want to use this function
-function autumn_preprocess_html(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
 
-  // The body tag's classes are controlled by the $classes_array variable. To
-  // remove a class from $classes_array, use array_diff().
-  //$variables['classes_array'] = array_diff($variables['classes_array'], array('class-to-remove'));
-}
-// */
+function autumn_preprocess_html(&$variables, $hook) {
+
+    // set footer column classes
+    if (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+        $variables['classes_array'][] = 'three-footers';
+    } elseif (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_second'])) {
+        $variables['classes_array'][] = 'footer1-footer2';
+    } elseif (!empty($variables['page']['footer_first']) && !empty($variables['page']['footer_third'])) {
+        $variables['classes_array'][] = 'footer1-footer3';
+    } elseif (!empty($variables['page']['footer_second']) && !empty($variables['page']['footer_third'])) {
+        $variables['classes_array'][] = 'footer2-footer3';
+    } elseif (!empty($variables['page']['footer_first'])) {
+        $variables['classes_array'][] = 'first-footer';
+    } elseif (!empty($variables['page']['footer_second'])) {
+        $variables['classes_array'][] = 'second-footer';
+    } elseif (!empty($variables['page']['footer_third'])) {
+        $variables['classes_array'][] = 'third-footer';
+    } else {
+        $variables['classes_array'][] = 'no-footers';
+    }
+    
+    // set class when nice menu is turned on
+    if (!empty($variables['page']['vertical_menu'])) {
+        $variables['classes_array'][] = 'vertical-menu';
+    }
+
+    // set class when navigation region is being used
+    if (!empty($variables['page']['navigation'])) {
+        $variables['classes_array'][] = 'navigation-bar';
+    }
+} // autumn_preprocess_html end
 
 /**
  * Override or insert variables into the page templates.
@@ -52,9 +75,9 @@ function autumn_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
+
 function autumn_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  $variables['vertical_menu'] = theme_get_setting('vertical_menu');
 }
 // */
 
@@ -101,14 +124,12 @@ function autumn_preprocess_comment(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("region" in this case.)
  */
-
+/*
 function autumn_preprocess_region(&$variables, $hook) {
   
-  if (strpos($variables['region'], 'sidebar_') === 0) {
-    $variables['theme_hook_suggestions'] = array_diff($variables['theme_hook_suggestions'], array('region__sidebar'));
-  }
+  
 }
-// 
+// */
 
 /**
  * Override or insert variables into the block templates.
@@ -130,3 +151,15 @@ function autumn_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/*
+function autumn_nice_menus_main_menu($variables) {
+  
+    
+    
+  $direction = $variables['direction'];
+  $depth = $variables['depth'];
+  $menu_name = variable_get('menu_main_links_source', 'main-menu');
+  $output = theme('nice_menus', array('id' => 0, 'menu_name' => $menu_name, 'mlid' => 0, 'direction' => $direction, 'depth' => $depth));
+  return $output['content'];
+}*/
