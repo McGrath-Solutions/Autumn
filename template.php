@@ -55,12 +55,7 @@ function autumn_preprocess_html(&$variables, $hook) {
     } else {
         $variables['classes_array'][] = 'no-footers';
     }
-    
-    // set class when nice menu is turned on
-    if (!empty($variables['page']['vertical_menu'])) {
-        $variables['classes_array'][] = 'vertical-menu';
-    }
-
+   
     // set class when navigation region is being used
     if (!empty($variables['page']['navigation'])) {
         $variables['classes_array'][] = 'navigation-bar';
@@ -74,12 +69,12 @@ function autumn_preprocess_html(&$variables, $hook) {
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
- */
+ 
 
 function autumn_preprocess_page(&$variables, $hook) {
-  $variables['vertical_menu'] = theme_get_setting('vertical_menu');
+  
 }
-// */
+ */
 
 /**
  * Override or insert variables into the node templates.

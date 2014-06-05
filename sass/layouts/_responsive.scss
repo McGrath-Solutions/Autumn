@@ -163,21 +163,6 @@ $zen-auto-include-item-base: false;
 @media all and (min-width: 960px) {
 
   $zen-column-count: 12;
-
-  /**
-   * The layout when there is only one sidebar, the left one.
-   */
-  .vertical-menu {
-    /* Span 4 columns, starting in 2nd column from left. */
-    #content {
-      @include zen-grid-item(10, 3);
-    }
-
-    /* Span 1 column, starting in 1st column from left. */
-    #vertical-navigation {
-      @include zen-grid-item(2, 1);
-    }
-  }
   
   /**
    * The layout when there is only one sidebar, the left one.
@@ -186,9 +171,6 @@ $zen-auto-include-item-base: false;
     /* Span 4 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(10, 3);
-    }
-    #vertical-navigation {
-      @include zen-grid-item(2, 1);
     }
     /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
@@ -218,11 +200,6 @@ $zen-auto-include-item-base: false;
     /* Span 3 columns, starting in 2nd column from left. */
     #content {
       @include zen-grid-item(7, 3);
-    }
-
-    /* Span 1 column, starting in 1st column from left. */
-    #vertical-navigation {
-      @include zen-grid-item(2, 1);
     }
 
     /* Span 1 column, starting in 5th column from left. */
@@ -287,11 +264,11 @@ $zen-auto-include-item-base: false;
     /* Three footers */
     .three-footers{
         .region-footer-first{
-            @include zen-grid-item(4, 1);
+            @include zen-grid-item(4, 1, left);
         }
 
         .region-footer-second{
-            @include zen-grid-item(4, 5);
+            @include zen-grid-item(4, 5, left);
         }
 
         .region-footer-third{
@@ -299,6 +276,7 @@ $zen-auto-include-item-base: false;
         }
         
         .region-footer-bottom{
+            @include zen-clear(both);
             @include zen-grid-item(12, 1);
         }
     }

@@ -47,6 +47,9 @@
                 ?>
             </nav>
         <?php endif; ?>
+            <div id="social-media">
+                <a href=""><img src="../images/facebook.png" alt="Find us on Facebook" /></a><img src="../images/twitter.png" alt="Find us on Twitter" /><img src="../images/youtube.png" alt="Find us on YouTube" />
+            </div>
 
 <?php print render($page['header']); ?>
 
@@ -74,7 +77,7 @@
         </div>
         
         <div id="navigation">
-            <?php if ($main_menu): ?>
+           <?php if ($main_menu): ?> 
                 <nav id="main-menu" role="navigation" tabindex="-1">
                     <?php
                        $menu = theme('nice_menus', array('id' => 1, 'menu_name' => 'main-menu', 'mlid' => 0, 'direction' => 'down', 'respect_expanded' => FALSE));
@@ -94,20 +97,6 @@
         
         <?php if ($sidebar_first || $sidebar_second): ?>
             <aside class="sidebars">
-                
-               <div id="vertical-navigation">
-                    <?php if ($vertical_menu): ?>
-                        <nav id="vertical-menu" role="navigation" tabindex="-1">
-                            <?php
-                       $menu = theme('nice_menus', array('id' => 1, 'menu_name' => 'main-menu', 'mlid' => 0, 'direction' => 'right', 'respect_expanded' => FALSE));
-                       print($menu['content']);
-                    ?>
-                        </nav>
-                    <?php endif; ?>
-
-                    <?php print render($page['vertical_menu']); ?>
-                </div>
-
                 <?php print $sidebar_first; ?>
                 <?php print $sidebar_second; ?>
             </aside>
@@ -121,11 +110,6 @@
     <?php print render($page['footer_third']); ?>
     <?php print render($page['footer_bottom']); ?>
   </footer>
-    
-    
-    
-
-
 </div>
 
 <?php print render($page['bottom']); ?>

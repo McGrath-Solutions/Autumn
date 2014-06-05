@@ -66,17 +66,18 @@ a:active{
 }
 }
 
-.nice-menu{
+
+#navigation{
+    background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#A45A10));
+    color: #ffffff;
+    padding: 0.357em;
     
 }
 
-/* Nice Menu */
-#vertical-navigation{
-    #nice-menu-1{
-        li{
-            width: 100%;
-        }
-        
-    }
-    
+
+
+
+.region-sidebar-second{
+    position: absolute;
+    top: $nav-height;
 }
