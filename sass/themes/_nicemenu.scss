@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 5, 2014, 4:45:43 PM
+    Author     : Owner
+*/
+
+ul.nice-menu-main-menu{
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+ul.nice-menu-main-menu li, 
+ul.nice-menu-main-menu li.menuparent{
+    background: none;
+    border: 0;
+}
+
+ul.nice-menu-main-menu li a, 
+ul.nice-menu-main-menu li.menuparent a{
+    display: block;
+    font-size: 1.429em;
+    color: #ffdd00;
+    text-shadow:1px 1px 0px #000000;
+    text-decoration: none;
+    padding: 0.786em 0.714em;
+}
+
+ul.nice-menu-main-menu li a:hover, 
+ul.nice-menu-main-menu li.menuparent a:hover,
+ul.nice-menu-main-menu li a:focus, 
+ul.nice-menu-main-menu li.menuparent a:focus{
+    color: #000;
+    text-shadow:1px 1px 0px #ffdd00;
+    background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#ffffff), to(#ACAC9D)); 
+}
+
+ul.nice-menu-main-menu li.menuparent ul li{
+    font-size: 1em;
+    background: #732E00;
+    color: #fff;
+    width: 6.429em;
+}

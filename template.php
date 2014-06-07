@@ -60,6 +60,24 @@ function autumn_preprocess_html(&$variables, $hook) {
     if (!empty($variables['page']['navigation'])) {
         $variables['classes_array'][] = 'navigation-bar';
     }
+    
+    if (!empty($variables['page']['left']) && !empty($variables['page']['middle']) && !empty($variables['page']['right'])) {
+        $variables['classes_array'][] = 'three-boxes';
+    } elseif (!empty($variables['page']['left']) && !empty($variables['page']['middle'])) {
+        $variables['classes_array'][] = 'left-middle';
+    } elseif (!empty($variables['page']['left']) && !empty($variables['page']['footer_right'])) {
+        $variables['classes_array'][] = 'left-right';
+    } elseif (!empty($variables['page']['middle']) && !empty($variables['page']['right'])) {
+        $variables['classes_array'][] = 'middle-right';
+    } elseif (!empty($variables['page']['left'])) {
+        $variables['classes_array'][] = 'left';
+    } elseif (!empty($variables['page']['middle'])) {
+        $variables['classes_array'][] = 'middle';
+    } elseif (!empty($variables['page']['right'])) {
+        $variables['classes_array'][] = 'right';
+    } else {
+        $variables['classes_array'][] = 'no-boxes';
+    }
 } // autumn_preprocess_html end
 
 /**
@@ -69,12 +87,13 @@ function autumn_preprocess_html(&$variables, $hook) {
  *   An array of variables to pass to the theme template.
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
- 
+ */ 
 
 function autumn_preprocess_page(&$variables, $hook) {
+  $variables['social_media'] = theme_get_setting('social_media');
   
 }
- */
+
 
 /**
  * Override or insert variables into the node templates.

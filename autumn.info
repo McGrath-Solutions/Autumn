@@ -95,7 +95,9 @@ regions[sidebar_second] = Second sidebar
 regions[bottom]         = Page bottom
 
 ; Custom Regions
-regions[vertical_menu]  = Vertical Menu
+regions[left]   = Left Box;
+regions[middle] = Middle Box;
+regions[right]  = Right Box;
 regions[footer_first]   = First Footer
 regions[footer_second]  = Second Footer
 regions[footer_third]   = Third Footer

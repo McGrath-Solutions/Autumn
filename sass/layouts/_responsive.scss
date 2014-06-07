@@ -45,6 +45,7 @@ $zen-auto-include-item-base: false;
 #navigation,
 .region-sidebar-first,
 .region-sidebar-second,
+#boxes,
 #footer {
   // See the note about $zen-auto-include-item-base above.
   @include zen-grid-item-base();
@@ -53,6 +54,7 @@ $zen-auto-include-item-base: false;
 /* Containers for grid items and flow items. */
 #header,
 #main,
+#boxes,
 #footer {
   /*@include zen-grid-background();*/
   @include zen-grid-container();
@@ -72,8 +74,6 @@ $zen-auto-include-item-base: false;
     top: 0;
     height: $nav-height;
     width: $zen-grid-width;
-    
-    
   }
 }
 
@@ -211,6 +211,68 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(2, 1);
     }
   }
+  
+  
+  .left{
+      .region-left{
+            @include zen-grid-item(12, 1);
+        }
+  }
+  
+  .middle{
+      .region-middle{
+            @include zen-grid-item(12, 1);
+        }
+  }
+  
+  .right{
+      .region-right{
+            @include zen-grid-item(12, 1);
+        }
+  }
+  
+  .left-middle{
+        .region-left{
+            @include zen-grid-item(6, 1);
+        }
+        .region-middle{
+            @include zen-grid-item(6, 1, right);
+        }
+    }
+    
+    .left-right{
+        .region-left{
+            @include zen-grid-item(6, 1);
+        }
+        .region-right{
+            @include zen-grid-item(6, 1, right);
+        }
+    }
+    
+    .middle-right{
+        .region-middle{
+            @include zen-grid-item(6, 1);
+        }
+        .region-right{
+            @include zen-grid-item(6, 1, right);
+        }
+    }
+    
+    /* Three footers */
+    .three-boxes{
+        .region-left{
+            @include zen-grid-item(4, 1, left);
+        }
+
+        .region-middle{
+            @include zen-grid-item(4, 5, left);
+        }
+
+        .region-right{
+            @include zen-grid-item(4, 9);
+        }
+    }
+  
   
   .first-footer{
       .region-footer-first{

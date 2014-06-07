@@ -99,9 +99,7 @@ $font-monospace:   $courier;
 $indent-amount: 30px;
 
 // The height of the navigation container.
-$nav-height: 3em;
-
-$vertical-menu-height: 50%;
+$nav-height: 3.5em;
 
 // Tab styling.
 $tabs-container-bg: #fff;
@@ -117,7 +115,7 @@ $tabs-border: #bbb;
 // Better than Drupal's clearfix.
 @import "compass/utilities/general/clearfix";
 // See http://compass-style.org/help/tutorials/spriting/
-@import "compass/utilities/sprites";
+//@import "compass/utilities/sprites";
 // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/css3";
 // Helps set up a vertical rhythm.

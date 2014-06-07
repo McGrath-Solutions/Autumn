@@ -70,14 +70,31 @@ a:active{
 #navigation{
     background:-webkit-gradient(linear, 100% 1%, 100% 100%, from(#000000), to(#A45A10));
     color: #ffffff;
-    padding: 0.357em;
+    padding: 0;
     
 }
-
 
 
 
 .region-sidebar-second{
     position: absolute;
     top: $nav-height;
+}
+
+#social_media{
+    padding-top: 0.714em;
+    float: right;
+    ul{
+        list-style-type: none;
+        padding: 0px;
+    margin: 0px;
+    }
+    li{
+        float: left;
+    }
+}
+
+
+.clear_r{
+    clear: right;
 }

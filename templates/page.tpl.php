@@ -7,11 +7,11 @@
  * @see https://drupal.org/node/1728148
  */
 ?>
-
+<?php global $base_path;?>
 <div id="page">
 
     <header class="header" id="header" role="banner">
-
+       
         <?php if ($logo): ?>
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
         <?php endif; ?>
@@ -28,6 +28,17 @@
                     <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
                 <?php endif; ?>
             </div>
+        <?php endif; ?>
+            
+        <?php if ($social_media): ?>
+            <div id="social_media">
+                <ul>
+                    <li><a href="https://www.facebook.com/groups/TheCPGroup.org/"><?php print "<img src='" . $base_path . path_to_theme() . "/images/facebook.png' alt='Find us on Facebook' />";?></a></li>
+                    <li><a href="https://twitter.com/TheCPgrouporg"><?php print "<img src='" . $base_path . path_to_theme() . "/images/twitter.png' alt='Find us on Twitter' />";?></a></li>
+                    <li><a href="https://www.youtube.com/user/thecpgroupdotorg"><?php print "<img src='" . $base_path . path_to_theme() . "/images/youtube.png' alt='Find us on You Tube' />";?></a></li>
+                </ul>
+            </div>
+            <div class="clear_r"></div>
         <?php endif; ?>
 
         <?php if ($secondary_menu): ?>
@@ -47,10 +58,7 @@
                 ?>
             </nav>
         <?php endif; ?>
-            <div id="social-media">
-                <a href=""><img src="../images/facebook.png" alt="Find us on Facebook" /></a><img src="../images/twitter.png" alt="Find us on Twitter" /><img src="../images/youtube.png" alt="Find us on YouTube" />
-            </div>
-
+            
 <?php print render($page['header']); ?>
 
     </header>
@@ -89,6 +97,8 @@
             <?php print render($page['navigation']); ?>
         </div>
         
+       
+        
         <?php
         // Render the sidebars to see if there's anything in them.
         $sidebar_first = render($page['sidebar_first']);
@@ -101,10 +111,20 @@
                 <?php print $sidebar_second; ?>
             </aside>
         <?php endif; ?>
+        
+        
 
     </div>
     
-    <footer id="footer" class="<?php print $classes; ?>">
+     <div id="boxes">
+            <aside class="sidebars-boxes">
+            <?php print render($page['left']); ?>
+    <?php print render($page['middle']); ?>
+    <?php print render($page['right']); ?>
+            </aside>
+        </div>
+    
+  <footer id="footer" class="<?php print $classes; ?>">
     <?php print render($page['footer_first']); ?>
     <?php print render($page['footer_second']); ?>
     <?php print render($page['footer_third']); ?>

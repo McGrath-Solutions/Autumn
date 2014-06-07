@@ -25,6 +25,4 @@
 
 /* SMACSS theme rules */
 @import "themes/theme-a";
-@import "../images/footer-icons/*.png";
-@include all-footer-icons-sprites;
-/* @import "theme-B"; */
+@import "themes/nicemenu"
